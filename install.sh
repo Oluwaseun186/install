@@ -94,3 +94,13 @@ sudo -u prometheus /usr/local/bin/prometheus \
   --web.enable-lifecycle \
   --web.enable-admin-api
 sudo systemctl restart prometheus
+
+#INSTALL ALAERT-MANAGER
+# Download and install
+wget https://github.com/prometheus/alertmanager/releases/download/v0.27.0/alertmanager-0.27.0.linux-amd64.tar.gz
+tar xvf alertmanager-*.tar.gz
+sudo mv alertmanager-*/alertmanager /usr/local/bin/
+sudo mv alertmanager-*/amtool /usr/local/bin/
+sudo mkdir -p /etc/alertmanager
+sudo mkdir -p /var/lib/alertmanager
+
